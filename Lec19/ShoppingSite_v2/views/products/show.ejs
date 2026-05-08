@@ -1,0 +1,25 @@
+<%- layout('/main/boilerplate.ejs') -%>
+
+<div class="mt-5">
+     
+
+    <div class="card ml-4 col col-lg-2" cols="6" style="width: 18rem; margin-left: 40px; width: 300px;">
+  <img src="<%= product.img %>" class="card-img-top ml-3"  alt="...">
+  <div class="card-body">
+    <h4 class="card-title"><%=product.name%></h4>
+    <h6 class="card-title">$ <%=product.price%></h6>
+    <p class="card-text"><%=product.desc%></p>
+
+
+    <button class="btn btn-primary" >Buy</button>
+     <button class="btn btn-secondary" >Add To Cart</button>
+     <a class="btn btn-warning" href="/products/<%=product._id%>/edit"> Edit</a>
+
+     <form action="/products/<%=product._id%>/delete?_method=DELETE"    method="POST">
+     <button type="submit" class="btn btn-danger"> Delete</button>
+     </form>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+
+</div>
